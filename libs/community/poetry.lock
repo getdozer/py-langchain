@@ -3120,13 +3120,13 @@ files = [
 
 [[package]]
 name = "jinja2"
-version = "3.1.3"
+version = "3.1.4"
 description = "A very fast and expressive template engine."
 optional = false
 python-versions = ">=3.7"
 files = [
-    {file = "Jinja2-3.1.3-py3-none-any.whl", hash = "sha256:7d6d50dd97d52cbc355597bd845fabfbac3f551e1f99619e39a35ce8c370b5fa"},
-    {file = "Jinja2-3.1.3.tar.gz", hash = "sha256:ac8bd6544d4bb2c9792bf3a159e80bba8fda7f07e81bc3aed565432d5925ba90"},
+    {file = "jinja2-3.1.4-py3-none-any.whl", hash = "sha256:bc5dd2abb727a5319567b7a813e6a2e7318c39f4f487cfe6c89c6f9c7d25197d"},
+    {file = "jinja2-3.1.4.tar.gz", hash = "sha256:4a3aee7acbbe7303aede8e9648d13b8bf88a429282aa6122a993f0ac800cb369"},
 ]
 
 [package.dependencies]
@@ -3883,7 +3883,6 @@ files = [
     {file = "lxml-5.2.1-cp37-cp37m-musllinux_1_2_x86_64.whl", hash = "sha256:9e2addd2d1866fe112bc6f80117bcc6bc25191c5ed1bfbcf9f1386a884252ae8"},
     {file = "lxml-5.2.1-cp37-cp37m-win32.whl", hash = "sha256:f51969bac61441fd31f028d7b3b45962f3ecebf691a510495e5d2cd8c8092dbd"},
     {file = "lxml-5.2.1-cp37-cp37m-win_amd64.whl", hash = "sha256:b0b58fbfa1bf7367dde8a557994e3b1637294be6cf2169810375caf8571a085c"},
-    {file = "lxml-5.2.1-cp38-cp38-macosx_10_9_universal2.whl", hash = "sha256:3e183c6e3298a2ed5af9d7a356ea823bccaab4ec2349dc9ed83999fd289d14d5"},
     {file = "lxml-5.2.1-cp38-cp38-macosx_10_9_x86_64.whl", hash = "sha256:804f74efe22b6a227306dd890eecc4f8c59ff25ca35f1f14e7482bbce96ef10b"},
     {file = "lxml-5.2.1-cp38-cp38-manylinux_2_12_i686.manylinux2010_i686.manylinux_2_17_i686.manylinux2014_i686.whl", hash = "sha256:08802f0c56ed150cc6885ae0788a321b73505d2263ee56dad84d200cab11c07a"},
     {file = "lxml-5.2.1-cp38-cp38-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:0f8c09ed18ecb4ebf23e02b8e7a22a05d6411911e6fabef3a36e4f371f4f2585"},
@@ -4970,9 +4969,9 @@ numpy = [
     {version = ">=1.21.0", markers = "python_version <= \"3.9\" and platform_system == \"Darwin\" and platform_machine == \"arm64\" and python_version >= \"3.8\""},
     {version = ">=1.19.3", markers = "platform_system == \"Linux\" and platform_machine == \"aarch64\" and python_version >= \"3.8\" and python_version < \"3.10\" or python_version > \"3.9\" and python_version < \"3.10\" or python_version >= \"3.9\" and platform_system != \"Darwin\" and python_version < \"3.10\" or python_version >= \"3.9\" and platform_machine != \"arm64\" and python_version < \"3.10\""},
     {version = ">=1.17.3", markers = "(platform_system != \"Darwin\" and platform_system != \"Linux\") and python_version >= \"3.8\" and python_version < \"3.9\" or platform_system != \"Darwin\" and python_version >= \"3.8\" and python_version < \"3.9\" and platform_machine != \"aarch64\" or platform_machine != \"arm64\" and python_version >= \"3.8\" and python_version < \"3.9\" and platform_system != \"Linux\" or (platform_machine != \"arm64\" and platform_machine != \"aarch64\") and python_version >= \"3.8\" and python_version < \"3.9\""},
+    {version = ">=1.23.5", markers = "python_version >= \"3.11\" and python_version < \"3.12\""},
     {version = ">=1.21.4", markers = "python_version >= \"3.10\" and platform_system == \"Darwin\" and python_version < \"3.11\""},
     {version = ">=1.21.2", markers = "platform_system != \"Darwin\" and python_version >= \"3.10\" and python_version < \"3.11\""},
-    {version = ">=1.23.5", markers = "python_version >= \"3.11\" and python_version < \"3.12\""},
 ]
 
 [[package]]
@@ -5023,60 +5022,6 @@ optuna = ["optuna (==2.9.0)", "oracle_ads[viz]"]
 pii = ["aiohttp", "datapane", "gender_guesser", "nameparser", "oracle_ads[opctl]", "plotly", "scrubadub (==2.0.1)", "scrubadub_spacy", "spacy (==3.6.1)", "spacy-transformers (==1.2.5)"]
 spark = ["pyspark (>=3.0.0)"]
 tensorflow = ["oracle_ads[viz]", "tensorflow"]
-text = ["spacy", "wordcloud (>=1.8.1)"]
-torch = ["oracle_ads[viz]", "torch", "torchvision"]
-viz = ["bokeh (>=3.0.0,<3.2.0)", "folium (>=0.12.1)", "graphviz (<0.17)", "scipy (>=1.5.4)", "seaborn (>=0.11.0)"]
-
-[[package]]
-name = "oracle-ads"
-version = "2.11.6"
-description = "Oracle Accelerated Data Science SDK"
-optional = true
-python-versions = ">=3.8"
-files = [
-    {file = "oracle_ads-2.11.6-py3-none-any.whl", hash = "sha256:5ef0ec2585cab947cfdbfef6e10bf2d111ccc414ac9675f6da5a34275ca847c8"},
-    {file = "oracle_ads-2.11.6.tar.gz", hash = "sha256:b7c4c0a4f8d7d4452b66d1a2f2cf51eab2cdbf6df988b6e75d54cfad5074a434"},
-]
-
-[package.dependencies]
-asteval = ">=0.9.25"
-cerberus = ">=1.3.4"
-cloudpickle = ">=1.6.0"
-fsspec = ">=0.8.7"
-gitpython = ">=3.1.2"
-jinja2 = ">=2.11.2"
-matplotlib = ">=3.1.3"
-numpy = ">=1.19.2"
-oci = ">=2.113.0"
-ocifs = ">=1.1.3"
-pandas = {version = ">1.2.1", markers = "python_version < \"3.9\""}
-psutil = ">=5.7.2"
-python_jsonschema_objects = ">=0.3.13"
-PyYAML = ">=6"
-requests = "*"
-scikit-learn = ">=1.0"
-tabulate = ">=0.8.9"
-tqdm = ">=4.59.0"
-
-[package.extras]
-anomaly = ["autots", "datapane", "oracle-automlx[classic] (==23.4.1)", "oracle-automlx[forecasting] (==23.4.1)", "oracle_ads[opctl]", "oracledb"]
-aqua = ["jupyter_server"]
-bds = ["hdfs[kerberos]", "ibis-framework[impala]", "sqlalchemy"]
-boosted = ["lightgbm (<4.0.0)", "xgboost"]
-data = ["datefinder (>=0.7.1)", "fastavro (>=0.24.2)", "htmllistparse (>=0.6.0)", "openpyxl (>=3.0.7)", "oracledb (>=1.0)", "pandavro (>=1.6.0)", "sqlalchemy (>=1.4.1,<=1.4.46)"]
-feature-store-marketplace = ["kubernetes", "oracle-ads[opctl]"]
-forecast = ["autots[additional]", "conda-pack", "datapane", "holidays (==0.21.13)", "inflection", "nbconvert", "nbformat", "neuralprophet", "numpy", "oci-cli", "oci-cli", "optuna (==3.1.0)", "oracle-ads", "oracle-automlx[classic] (==23.4.1)", "oracle-automlx[forecasting] (==23.4.1)", "oracledb", "plotly", "pmdarima", "prophet", "py-cpuinfo", "rich", "shap", "sktime", "statsmodels"]
-geo = ["geopandas", "oracle_ads[viz]"]
-huggingface = ["transformers"]
-llm = ["evaluate (>=0.4.0)", "langchain (>=0.1.10)"]
-notebook = ["ipython (>=7.23.1,<8.0)", "ipywidgets (>=7.6.3,<7.7.0)"]
-onnx = ["lightgbm (<4.0.0)", "onnx (>=1.12.0)", "onnxmltools (>=1.10.0)", "onnxruntime (>=1.10.0,<1.16)", "oracle_ads[viz]", "protobuf (<=3.20)", "skl2onnx (>=1.10.4)", "tf2onnx", "xgboost (<=1.7)"]
-opctl = ["cachetools", "conda-pack", "docker", "fire", "inflection", "nbconvert", "nbformat", "oci-cli", "py-cpuinfo", "rich"]
-optuna = ["optuna (==2.9.0)", "oracle_ads[viz]"]
-pii = ["aiohttp", "datapane", "gender_guesser", "nameparser", "oracle_ads[opctl]", "plotly", "scrubadub (==2.0.1)", "scrubadub_spacy", "spacy (==3.6.1)", "spacy-transformers (==1.2.5)"]
-spark = ["pyspark (>=3.0.0)"]
-tensorflow = ["oracle_ads[viz]", "tensorflow"]
-testsuite = ["arff", "category_encoders (==2.6.3)", "cohere (==4.53)", "dask (==2023.10.1)", "dask (==2023.10.1)", "dask (==2023.5.0)", "dask (==2023.5.0)", "faiss-cpu", "fastparquet (==2024.2.0)", "imbalanced-learn", "lxml", "mysql-connector-python", "nltk", "notebook (==6.4.12)", "opensearch-py", "pdfplumber", "py4j", "pyarrow", "statsmodels", "statsmodels (>=0.14.1)", "tables", "xlrd (>=1.2.0)"]
 text = ["spacy", "wordcloud (>=1.8.1)"]
 torch = ["oracle_ads[viz]", "torch", "torchvision"]
 viz = ["bokeh (>=3.0.0,<3.2.0)", "folium (>=0.12.1)", "graphviz (<0.17)", "scipy (>=1.5.4)", "seaborn (>=0.11.0)"]
@@ -5200,8 +5145,8 @@ files = [
 [package.dependencies]
 numpy = [
     {version = ">=1.20.3", markers = "python_version < \"3.10\""},
-    {version = ">=1.21.0", markers = "python_version >= \"3.10\" and python_version < \"3.11\""},
     {version = ">=1.23.2", markers = "python_version >= \"3.11\""},
+    {version = ">=1.21.0", markers = "python_version >= \"3.10\" and python_version < \"3.11\""},
 ]
 python-dateutil = ">=2.8.2"
 pytz = ">=2020.1"
@@ -8589,20 +8534,6 @@ types-pyOpenSSL = "*"
 
 [[package]]
 name = "types-requests"
-version = "2.31.0.6"
-description = "Typing stubs for requests"
-optional = false
-python-versions = ">=3.7"
-files = [
-    {file = "types-requests-2.31.0.6.tar.gz", hash = "sha256:cd74ce3b53c461f1228a9b783929ac73a666658f223e28ed29753771477b3bd0"},
-    {file = "types_requests-2.31.0.6-py3-none-any.whl", hash = "sha256:a2db9cb228a81da8348b49ad6db3f5519452dd20a9c1e1a868c83c5fe88fd1a9"},
-]
-
-[package.dependencies]
-types-urllib3 = "*"
-
-[[package]]
-name = "types-requests"
 version = "2.31.0.20240406"
 description = "Typing stubs for requests"
 optional = false
@@ -8624,17 +8555,6 @@ python-versions = ">=3.8"
 files = [
     {file = "types-toml-0.10.8.20240310.tar.gz", hash = "sha256:3d41501302972436a6b8b239c850b26689657e25281b48ff0ec06345b8830331"},
     {file = "types_toml-0.10.8.20240310-py3-none-any.whl", hash = "sha256:627b47775d25fa29977d9c70dc0cbab3f314f32c8d8d0c012f2ef5de7aaec05d"},
-]
-
-[[package]]
-name = "types-urllib3"
-version = "1.26.25.14"
-description = "Typing stubs for urllib3"
-optional = false
-python-versions = "*"
-files = [
-    {file = "types-urllib3-1.26.25.14.tar.gz", hash = "sha256:229b7f577c951b8c1b92c1bc2b2fdb0b49847bd2af6d1cc2a2e3dd340f3bda8f"},
-    {file = "types_urllib3-1.26.25.14-py3-none-any.whl", hash = "sha256:9683bbb7fb72e32bfe9d2be6e04875fbe1b3eeec3cbb4ea231435aa7fd6b4f0e"},
 ]
 
 [[package]]
@@ -8735,22 +8655,6 @@ dev = ["flake8", "flake8-annotations", "flake8-bandit", "flake8-bugbear", "flake
 
 [[package]]
 name = "urllib3"
-version = "1.26.18"
-description = "HTTP library with thread-safe connection pooling, file post, and more."
-optional = false
-python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*, !=3.5.*"
-files = [
-    {file = "urllib3-1.26.18-py2.py3-none-any.whl", hash = "sha256:34b97092d7e0a3a8cf7cd10e386f401b3737364026c45e622aa02903dffe0f07"},
-    {file = "urllib3-1.26.18.tar.gz", hash = "sha256:f8ecc1bba5667413457c529ab955bf8c67b45db799d159066261719e328580a0"},
-]
-
-[package.extras]
-brotli = ["brotli (==1.0.9)", "brotli (>=1.0.9)", "brotlicffi (>=0.8.0)", "brotlipy (>=0.6.0)"]
-secure = ["certifi", "cryptography (>=1.3.4)", "idna (>=2.0.0)", "ipaddress", "pyOpenSSL (>=0.14)", "urllib3-secure-extra"]
-socks = ["PySocks (>=1.5.6,!=1.5.7,<2.0)"]
-
-[[package]]
-name = "urllib3"
 version = "2.2.1"
 description = "HTTP library with thread-safe connection pooling, file post, and more."
 optional = false
@@ -8797,6 +8701,23 @@ standard = ["colorama (>=0.4)", "httptools (>=0.5.0)", "python-dotenv (>=0.13)",
 
 [[package]]
 name = "vcrpy"
+version = "4.3.0"
+description = "Automatically mock your HTTP interactions to simplify and speed up testing"
+optional = false
+python-versions = ">=3.7"
+files = [
+    {file = "vcrpy-4.3.0-py2.py3-none-any.whl", hash = "sha256:8fbd4be412e8a7f35f623dd61034e6380a1c8dbd0edf6e87277a3289f6e98093"},
+    {file = "vcrpy-4.3.0.tar.gz", hash = "sha256:49c270ce67e826dba027d83e20d25b67a5885487697e97bca6dbdf53d750a0ac"},
+]
+
+[package.dependencies]
+PyYAML = "*"
+six = ">=1.5"
+wrapt = "*"
+yarl = "*"
+
+[[package]]
+name = "vcrpy"
 version = "6.0.1"
 description = "Automatically mock your HTTP interactions to simplify and speed up testing"
 optional = false
@@ -8807,7 +8728,6 @@ files = [
 
 [package.dependencies]
 PyYAML = "*"
-urllib3 = {version = "<2", markers = "platform_python_implementation == \"PyPy\" or python_version < \"3.10\""}
 wrapt = "*"
 yarl = "*"
 
